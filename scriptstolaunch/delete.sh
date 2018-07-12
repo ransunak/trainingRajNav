@@ -3,11 +3,11 @@ AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY
 AWS_DEFAULT_REGION=$AWS_DEFAULT_REGION
 ZONES=$ZONES
 NAME=$NAME
-KOPS_STATE_STORE=$KOPS_STATE_STORE" >kops
+#KOPS_STATE_STORE=$KOPS_STATE_STORE" >kops
 
-kops delete cluster --name $NAME --yes
+#kops delete cluster --name $NAME --yes
 
-aws s3api delete-bucket --bucket $BUCKET_NAME
+#aws s3api delete-bucket --bucket $BUCKET_NAME
 
 aws iam remove-user-from-group --user-name kops --group-name kops
 
